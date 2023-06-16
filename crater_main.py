@@ -24,8 +24,8 @@ if __name__ == "__main__":
     colormap = matplotlib.cm.get_cmap("twilight").colors
     palette = denormalize(colormap)
 
-    mandelbrot_set = MandelbrotSet(max_iterations=100, escape_radius=1500)
-    image = Image.new(mode="RGB", size=(300, 700))
-    viewport = Viewport(image, center=-0.7440 + 0.131415926j, width=0.002)
+    mandelbrot_set = MandelbrotSet(max_iterations=1000, escape_radius=1500)
+    image = Image.new(mode="RGB", size=(1500, 1500))
+    viewport = Viewport(image, center=-0.7442 + 0.131415926j, width=0.00069)
     paint(mandelbrot_set, viewport, palette, smooth=True)
     image.show()
